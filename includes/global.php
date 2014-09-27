@@ -23,17 +23,3 @@ $html = '
 </div>';
 
 WidgetLoader::add("SidePanel", 10, $html);
-
-// Widgets
-
-// Document List
-WidgetLoader::add("SidePanel", 50, '
-<div class="panel-box">
-	<a href="#" class="panel-head">Documents<span class="icon-circle-right nav-arrow"></a>
-	<ul class="panel-notes">
-		<li class="nav-note"><a href="/docs/faqs">Frequently Asked Questions</a></li>
-		<li class="nav-note"><a href="/docs/tos">Terms of Service</a></li>
-		<li class="nav-note"><a href="/docs/privacy">Privacy Policy</a></li>
-		<li class="nav-note"><a href="/">Contact Us</a></li>
-	</ul>
-</div>');

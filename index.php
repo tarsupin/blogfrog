@@ -27,7 +27,7 @@ if($url[0] != '')
 		
 		if($contentID = (int) Database::selectValue("SELECT content_id FROM content_by_url WHERE url_slug=? LIMIT 1", array($prep)))
 		{
-			require(APP_PATH . '/controller/blog.php'); exit;
+			require(APP_PATH . '/controller/read.php'); exit;
 		}
 	}
 	
@@ -36,7 +36,7 @@ if($url[0] != '')
 	{
 		$userData['uni_id'] = (int) $userData['uni_id'];
 		
-		require(APP_PATH . '/controller/blog-list.php'); exit;
+		require(APP_PATH . '/controller/user.php'); exit;
 	}
 }
 //*/

@@ -33,7 +33,7 @@ $hashtags = ModuleHashtags::get($contentID);
 
 // Include Responsive Script
 Photo::prepareResponsivePage();
-Metadata::addHeader('<link rel="stylesheet" href="' . CDN . '/css/content-block.css" />');
+Metadata::addHeader('<link rel="stylesheet" href="' . CDN . '/css/content-system.css" />');
 
 /****** Page Configurations ******/
 $config['canonical'] = "/" . $contentData['url_slug'];
