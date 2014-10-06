@@ -42,7 +42,7 @@ echo '
 <h3>Recent Blogs</h3>';
 
 // Display the Feed
-ContentFeed::displayFeed($contentIDs, true, Me::$id);
+ContentFeed::displayFeed($contentIDs, true, Me::$id, true);
 
 echo '
 </div>';
