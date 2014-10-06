@@ -15,7 +15,12 @@ $html = '
 		if(Me::$id)
 		{
 			$html .= '
-			<li class="nav-slot' . ($url[0] == "my-blogs" ? " nav-active" : "") . '"><a href="/' . Me::$vals['handle'] . '">My Blogs<span class="icon-circle-right nav-arrow"></span></a></li>';
+			<li class="nav-slot' . ($url[0] == Me::$vals['handle'] ? " nav-active" : "") . '"><a href="/' . Me::$vals['handle'] . '">My Blogs<span class="icon-circle-right nav-arrow"></span></a></li>';
+		}
+		else
+		{
+			$html .= '
+			<li class="nav-slot' . ($url[0] == "my-blogs" ? " nav-active" : "") . '"><a href="/my-blogs">My Blogs<span class="icon-circle-right nav-arrow"></span></a></li>';
 		}
 		
 		$html .= '

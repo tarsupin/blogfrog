@@ -39,6 +39,7 @@ $contentIDs = ContentFeed::getUserEntryIDs($userData['uni_id']);
 
 // Prepare the Content Feed
 ContentFeed::prepare();
+ContentFeed::$urlPrefix = $userData['handle'] . "/";
 
 /****** Page Configurations ******/
 $config['canonical'] = "/" . $userData['handle'];
