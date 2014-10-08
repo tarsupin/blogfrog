@@ -26,6 +26,9 @@ $contentForm->settings = array(
 ,	"Related"		=> true
 );
 
+// Make sure the user has access
+$contentForm->verifyAccess();
+
 // Run the Interpreter
 $contentForm->interpret();
 
