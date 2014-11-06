@@ -6,17 +6,20 @@ if(!isset($contentID))
 	header("Location: /"); exit;
 }
 
-// Prepare Content Entry
-Content::prepare($contentID);
-
 // Prepare Values
 Content::$openPost = true;
+
+// Prepare Content Entry
+Content::prepare($contentID);
 
 /****** Page Configurations ******/
 $config['canonical'] = "/" . Content::$contentData['url_slug'];
 $config['pageTitle'] = Content::$contentData['title'];
 Metadata::$index = true;
 Metadata::$follow = true;
+
+// Prepare the Page's Active Hashtag
+$config['active-hashtag'] = Content::$contentData['primary_hashtag'];
 
 // Run Global Script
 require(APP_PATH . "/includes/global.php");
