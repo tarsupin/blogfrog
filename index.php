@@ -31,7 +31,12 @@ if($url[0] != '')
 	// Load a specific user
 	if($userData = User::getDataByHandle($url[0], "uni_id, handle, display_name"))
 	{
+		// Prepare Data
 		$userData['uni_id'] = (int) $userData['uni_id'];
+		
+		You::$id = (int) $userData['uni_id'];
+		You::$handle = $userData['handle'];
+		You::$name = $userData['display_name'];
 		
 		require(APP_PATH . '/controller/user.php'); exit;
 	}

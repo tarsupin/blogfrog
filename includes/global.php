@@ -1,13 +1,8 @@
 <?php if(!defined("CONF_PATH")) { die("No direct script access allowed."); } 
 
 // UniFaction Dropdown Menu
-WidgetLoader::add("UniFactionMenu", 10, '
-<div class="menu-wrap hide-600">
-	<ul class="menu">' . 
-		(Me::$loggedIn ? '<li class="menu-slot' . ($url[0] == Me::$vals['handle'] ? " menu-active" : "") . '"><a href="/' . Me::$vals['handle'] . '">My Blog</a></li>' : '') . 
-		'<li class="menu-slot' . ($url[0] == "" ? " menu-active" : "") . '"><a href="/">Feed</a>
-	</ul>
-</div>');
+$extraColumns = (Me::$loggedIn ? '<li class="menu-slot' . ($url[0] == Me::$vals['handle'] ? " menu-active" : "") . '"><a href="/' . Me::$vals['handle'] . '">My Blog</a></li>' : '<li class="menu-slot"><a href="/login">My Blog</a></li>') . 
+	'<li class="menu-slot' . ($url[0] == "" ? " menu-active" : "") . '"><a href="/">Feed</a>';
 
 // Main Navigation
 $html = '
@@ -31,3 +26,6 @@ $html = '
 </div>';
 
 WidgetLoader::add("SidePanel", 10, $html);
+
+// Load the Social Menu
+require(SYS_PATH . "/controller/includes/social-menu.php");
