@@ -21,6 +21,13 @@ Metadata::$index = false;
 Metadata::$follow = true;
 // Metadata::openGraph($title, $image, $url, $desc, $type);		// Title = up to 95 chars.
 
+// Set the active user to yourself
+if(Me::$loggedIn)
+{
+	You::$id = Me::$id;
+	You::$handle = Me::$vals['handle'];
+}
+
 // Run Global Script
 require(CONF_PATH . "/includes/global.php");
 

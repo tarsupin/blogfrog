@@ -21,6 +21,11 @@ Metadata::$follow = true;
 // Prepare the Page's Active Hashtag
 $config['active-hashtag'] = Content::$contentData['primary_hashtag'];
 
+// Prepare Values
+You::$id = (int) Content::$contentData['uni_id'];
+You::$handle = Content::$contentData['handle'];
+You::$name = Content::$contentData['display_name'];
+
 // Run Global Script
 require(APP_PATH . "/includes/global.php");
 
