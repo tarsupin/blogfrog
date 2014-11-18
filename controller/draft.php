@@ -58,7 +58,7 @@ echo '
 // Display the Page
 echo '
 <h1>' . $contentData['title'] . '</h1>
-<p style="margin-bottom:0px;">Draft by <a href="' . URL::unifaction_social() . '/' . $contentData['handle'] . '">' . $contentData['display_name'] . '</a> (<a href="' . URL::fastchat_social() . '/' . $contentData['handle'] . '">@' . $contentData['handle'] . '</a>)</p>
+<p style="margin-bottom:0px;">Draft by <a href="' . URL::unifaction_social() . '/' . $contentData['handle'] . '">' . $contentData['display_name'] . '</a> (<a href="' . URL::unifaction_social() . '/' . $contentData['handle'] . '">@' . $contentData['handle'] . '</a>)</p>
 <p>';
 
 // Display the hashtag list
