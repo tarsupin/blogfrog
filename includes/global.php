@@ -21,7 +21,7 @@ $html = '
 	</ul>
 </div>';
 
-WidgetLoader::add("SidePanel", 10, $html);
+WidgetLoader::add("MobilePanel", 10, $html);
 
 // Load the Social Menu
 require(SYS_PATH . "/controller/includes/social-menu.php");
